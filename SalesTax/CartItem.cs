@@ -16,20 +16,28 @@ namespace SalesTax
 		protected string[] exempt = { "chocolate", "bread", "tofu", "book", "journal", "pill", "medi", "bandage" };
 		public string Name { get; set; }
 		public decimal BasePrice { get; set; }
-		public virtual decimal Tax
+		protected virtual decimal Tax
 		{
 			get
 			{
-				if (exempt.Any(item => item.Contains(Name)))
+				if (exempt.Any(item => Name.Contains(item)))
 					return 0;
 				return BasePrice * SalesTax;
+			}
+		}
+
+		public decimal RoundedTax
+		{
+			get
+			{
+				return Math.Ceiling(this.Tax * 20) / 20;
 			}
 		}
 		public decimal DisplayPrice
 		{
 			get
 			{
-				return this.Tax + this.BasePrice;
+				return this.RoundedTax + this.BasePrice;
 			}
 		}
 	}

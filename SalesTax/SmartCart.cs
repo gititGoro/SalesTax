@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace SalesTax
 {
-	public class SmartCart//TODO: unit test
+	public class SmartCart
 	{
 		public SmartCart()
 		{
@@ -42,7 +42,7 @@ namespace SalesTax
 		{
 			get
 			{
-				return Items.SelectMany(item => item.Value).Sum(item => item.Tax);
+				return Items.SelectMany(item => item.Value).Sum(item => item.RoundedTax);
 			}
 		}
 
