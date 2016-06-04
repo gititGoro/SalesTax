@@ -1,9 +1,3 @@
-C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\bin\Debug\SalesTax.exe.config
-C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\bin\Debug\SalesTax.exe
-C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\bin\Debug\SalesTax.pdb
-C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\obj\Debug\SalesTax.csprojResolveAssemblyReference.cache
-C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\obj\Debug\SalesTax.exe
-C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\obj\Debug\SalesTax.pdb
 H:\Repositories\SalesTax\SalesTax\bin\Debug\SalesTax.exe.config
 H:\Repositories\SalesTax\SalesTax\obj\Debug\SalesTax.exe
 H:\Repositories\SalesTax\SalesTax\obj\Debug\SalesTax.pdb
@@ -11,3 +5,8 @@ H:\Repositories\SalesTax\SalesTax\bin\Debug\SalesTax.exe
 H:\Repositories\SalesTax\SalesTax\bin\Debug\SalesTax.pdb
 H:\Repositories\SalesTax\SalesTax\bin\Debug\nunit.framework.dll
 H:\Repositories\SalesTax\SalesTax\bin\Debug\nunit.framework.xml
+C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\bin\Debug\SalesTax.exe.config
+C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\bin\Debug\SalesTax.exe
+C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\bin\Debug\SalesTax.pdb
+C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\obj\Debug\SalesTax.exe
+C:\Users\justin.heyns\Desktop\pactice sandpit thing\SalesTax\SalesTax\obj\Debug\SalesTax.pdb
