@@ -53,5 +53,19 @@ namespace SalesTax
 				return Items.SelectMany(item => item.Value).Sum(item => item.DisplayPrice);
 			}
 		}
+
+		public override string ToString()
+		{
+			StringBuilder stringBuilder = new StringBuilder();
+			foreach (var itemType in this.Items)
+			{
+				var itemList = itemType.Value.ToArray();
+				stringBuilder.AppendLine($"{itemList.Length} {itemType.Key}: {itemList.Sum(item=>item.DisplayPrice)}");
+			}
+			var flatList = this.Items.SelectMany(item => item.Value).ToArray();
+			stringBuilder.AppendLine($"Sales Tax: {flatList.Sum(item => item.RoundedTax)}");
+			stringBuilder.AppendLine($"Total: {flatList.Sum(item => item.DisplayPrice)}");
+			return stringBuilder.ToString();
+		}
 	}
 }

@@ -24,7 +24,7 @@ namespace SalesTax
 			Console.WriteLine("INPUT:");
 			foreach (var line in input)
 			{
-				string currentLine = line;
+				string currentLine = line.Trim();
 				int quantity = int.Parse(currentLine.Substring(0, currentLine.IndexOf(" ")).Trim());
 				currentLine = currentLine.Substring(currentLine.IndexOf(" ") + 1);
 				string name = currentLine.Substring(0, currentLine.LastIndexOf("at")).Trim();
@@ -35,13 +35,7 @@ namespace SalesTax
 			}
 
 			Console.WriteLine($"{Environment.NewLine}OUTPUT:");
-			foreach(var itemType in cart.Items)
-			{
-				int count = itemType.Value.Count;
-				Console.WriteLine($"{count} {itemType.Key}{(count > 1 ? "s" : "")} at {itemType.Value.Sum(item => item.DisplayPrice)}");
-			}
-			Console.WriteLine($"Sales Tax: {cart.TotalTax}");
-			Console.WriteLine($"Total: {cart.Total}");
+			Console.WriteLine(cart.ToString());
 			Console.ReadLine();
 		}
 	}
