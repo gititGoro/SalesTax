@@ -12,17 +12,19 @@ namespace SalesTax
 		{
 		}
 
-		const decimal SalesTax = 0.1m;
-		protected string[] exempt = { "chocolate", "bread", "tofu", "book", "journal", "pill", "medi", "bandage" };
+		public ITax [] Taxes { get; set; }
 		public string Name { get; set; }
 		public decimal BasePrice { get; set; }
 		protected virtual decimal Tax
 		{
 			get
 			{
-				if (exempt.Any(item => Name.Contains(item)))
-					return 0;
-				return BasePrice * SalesTax;
+				decimal tax = 0;
+				foreach(var taxType in Taxes)
+				{
+					tax += taxType.Calculate(this.BasePrice);
+				}
+				return tax;
 			}
 		}
 

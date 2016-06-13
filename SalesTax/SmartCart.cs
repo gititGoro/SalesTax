@@ -18,12 +18,24 @@ namespace SalesTax
 		{
 			for (int i = 0; i < quantity; i++)
 			{
-				if (name.ToLower().Contains("import"))
-					AddToItemDictionary(name, new ImportedItem() { BasePrice = basePrice, Name = name });
-				else
-					AddToItemDictionary(name, new CartItem { BasePrice = basePrice, Name = name });
+				var taxes = GetTaxes(name);
+				AddToItemDictionary(name, new CartItem { BasePrice = basePrice, Name = name, Taxes = taxes });
 			}
 
+		}
+		protected string[] exempt = { "chocolate", "bread", "tofu", "book", "journal", "pill", "medi", "bandage" };
+		private ITax [] GetTaxes (string productName)
+		{
+			List<ITax> taxes = new List<ITax>();
+			if(!exempt.Any(item=>productName.ToLower().Contains(item)))
+			{
+				taxes.Add(new SalesTax());
+			}
+			if (productName.ToLower().Contains("import"))
+			{
+				taxes.Add(new ImportTax());
+			}
+			return taxes.ToArray();
 		}
 
 		private void AddToItemDictionary(string name, CartItem item)

@@ -64,9 +64,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CartItem.cs" />
+    <Compile Include="ImportTax.cs" />
+    <Compile Include="ITax.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ImportedItem.cs" />
+    <Compile Include="SalesTax.cs" />
     <Compile Include="SmartCart.cs" />
   </ItemGroup>
   <ItemGroup>
